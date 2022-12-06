@@ -9,9 +9,9 @@ with open('06-tuning-trouble - input', 'r') as input:
             if marker_index <= 3:
                 marker = marker + [character]
             else:
-                duplicates = [character for character in marker if marker.count(character) > 1]
+                duplicates = set(marker)
 
-                if len(duplicates) == 0:
+                if len(duplicates) == 4:
                     print(f"Part 1: {marker_index}")
                     break
                 else:
@@ -29,9 +29,9 @@ with open('06-tuning-trouble - input', 'r') as input:
             if marker_index <= 13:
                 marker = marker + [character]
             else:
-                duplicates = [character for character in marker if marker.count(character) > 1]
+                duplicates = set(marker)
 
-                if len(duplicates) == 0:
+                if len(duplicates) == 14:
                     print(f"Part 2: {marker_index}")
                     break
                 else:
